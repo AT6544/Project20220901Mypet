@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>메인페이지</title>
+    <link th:href="@{/bootstrap/css/bootstrap.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="text-white" th:href="@{/member/ownermember/insertOwnerMember}">사업자회원가입</a>
+        <a class="text-white" th:href="@{/mypetboard/hotel/insertHotel}">호텔등록</a>
+        <a class="text-white" th:href="@{/mypetboard/hotel/getHotelList}">호텔목록</a>
+        <a class="text-white" th:href="@{/mypetboard/hospital/insertHospital}">병원등록</a>
+        <a class="text-white" th:href="@{/mypetboard/hospital/getHospitalList}">병원목록</a>
+        <a class="text-white" th:href="@{/mypetboard/foodcafe/insertFoodcafe}">가게등록</a>
+        <a class="text-white" th:href="@{/mypetboard/foodcafe/getFoodcafeList}">가게목록</a>
+        <form class="d-flex">
+            <input class = "form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button  class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+</body>
+</html>

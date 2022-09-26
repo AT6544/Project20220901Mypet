@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/bootstrap/css/bootstrap.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>호텔 목록</h1>
+<table class="table table-striped" border="1" cellpadding="0" cellspacing="0" width="700" >
+    <tr>
+        <th width="200">가게번호</th>
+        <th width="200">가게이름</th>
+        <th width="200">상세정보</th>
+    </tr>
+
+    <tr th:each=" hotel : ${hotelList}">
+        <td th:name="seq" th:text = "${hotel.seq}"></td>
+        <td><a th:href="@{getHotel(seq = ${hotel.seq})}"
+               th:text="${hotel.storeName}"></a> </td>
+        <td th:text="${hotel.info}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
